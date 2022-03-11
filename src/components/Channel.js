@@ -4,7 +4,6 @@ import firebase from 'firebase/compat/app'
 const Channel = ({ user = null, db = null }) => {
     const [messages, setMessages] = useState([]);
     const [newMessage, setNewMessage] = useState('');
-
     const { uid, displayName, photoURL } = user;
 
     useEffect(() => {
