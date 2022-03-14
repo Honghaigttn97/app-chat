@@ -4,7 +4,7 @@ import firebase from 'firebase/compat/app'
 const Channel = ({ user = null, db = null }) => {
     const [messages, setMessages] = useState([]);
     const [newMessage, setNewMessage] = useState('');
-    const { uid, displayName, photoURL } = user;
+    const { uid, displayName } = user;
 
     useEffect(() => {
         if (db) {
@@ -46,7 +46,10 @@ const Channel = ({ user = null, db = null }) => {
             <ul className='list-chat'>
                 {
                     messages.map(x => {
-                        return <li key={x?.id}>{x?.text}</li>
+                        return <li key={x?.id}>
+                            <div style={{ color: 'black' }} >{x?.displayName}</div>
+                            <div>{x?.text}</div>
+                        </li>
                     })
                 }
             </ul>

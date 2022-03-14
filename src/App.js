@@ -2,7 +2,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import { useEffect, useState } from 'react';
-import Button from './components/Button';
+// import Button from './components/Button';
 import Channel from './components/Channel';
 import './App.css';
 
@@ -35,7 +35,7 @@ function App() {
       }
     })
     return unsubscribe
-  }, []);
+  }, [initializing]);
 
 
 
@@ -63,7 +63,7 @@ function App() {
       <div className='div-left'></div>
       <div className='div-center'>
         {user ? <><button className='btn-login' onClick={signOut}>Sign out</button>
-          <Channel user={user} db={db} /> </> : <Button onClick={signInWithGoogle} >Sign in with Google</Button>}
+          <Channel user={user} db={db} /> </> : <button className='btn-login' onClick={signInWithGoogle} >Sign in with Google</button>}
       </div>
       <div className='div-right'></div>
 
