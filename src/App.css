@@ -1,7 +1,9 @@
+
 .container{
   display: flex;
   color: red;
   min-height: 100vh;
+  max-height: 100vh;
 }
 .div-left{
   flex-basis: 33.3%;
@@ -57,4 +59,17 @@
   border-radius: 10px;
   background-color: aqua;
   color: gray;
+}
+
+@media only screen and (max-width: 63.9375em){
+  .div-left{
+    flex-basis: 0%;
+  }
+  .div-center{
+    flex-basis: 100%;
+  }
+  .div-right{
+    flex-basis: 0%;
+  }
+  
 }
