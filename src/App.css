@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container{
+  display: flex;
+  color: red;
   min-height: 100vh;
+}
+.div-left{
+  flex-basis: 33.3%;
+}
+.div-center{
+  flex-basis: 33.3%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
-
-.App-link {
-  color: #61dafb;
+.div-right{
+  flex-basis: 33.3%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-chat{
+  flex-basis: 95%;
+  list-style-type: none;
+  border: 0.5px solid aqua;
+  border-radius: 10px;
+  overflow-y: auto;
+  padding-top: 10px;
+  background-color: azure;
+}
+.list-chat li{
+  padding: 5px;
+}
+.input-chat{
+  display: flex;
+  height: 40px;
+  line-height: 40px;
+  padding-bottom: 20px;
+}
+.input-chat input{
+  width: 80%;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  border: 0.5px solid aqua;
+  padding: 10px;
+  background-color: azure;
+}
+.input-chat button{
+  width: 20%;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+  border: 0.5px solid aqua;
+  outline: none;
+  background-color: aqua;
+}
+.btn-login{
+  height: 35px;
+  padding: 10px;
+  border: none;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: aqua;
+  color: gray;
 }

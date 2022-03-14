@@ -43,14 +43,14 @@ const Channel = ({ user = null, db = null }) => {
 
     return (
         <>
-            <ul>
+            <ul className='list-chat'>
                 {
                     messages.map(x => {
                         return <li key={x?.id}>{x?.text}</li>
                     })
                 }
             </ul>
-            <form onSubmit={handleOnSubmit}>
+            <form className='input-chat' onSubmit={handleOnSubmit}>
                 <input type="text" value={newMessage} onChange={handleOnChange} />
                 <button type='submit' disabled={!newMessage} >Send</button>
             </form>

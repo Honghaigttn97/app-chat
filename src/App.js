@@ -4,6 +4,7 @@ import 'firebase/compat/firestore';
 import { useEffect, useState } from 'react';
 import Button from './components/Button';
 import Channel from './components/Channel';
+import './App.css';
 
 firebase.initializeApp({
   apiKey: "AIzaSyDDrglGtjZySVbwBuan1iky5bqLOD-8Pxc",
@@ -58,9 +59,14 @@ function App() {
   if (initializing) return "Loading..."
 
   return (
-    <div >
-      {user ? <><button onClick={signOut}>Sign out</button>
-        <Channel user={user} db={db} /> </> : <Button onClick={signInWithGoogle} >Sign in with Google</Button>}
+    <div className='container'>
+      <div className='div-left'></div>
+      <div className='div-center'>
+        {user ? <><button className='btn-login' onClick={signOut}>Sign out</button>
+          <Channel user={user} db={db} /> </> : <Button onClick={signInWithGoogle} >Sign in with Google</Button>}
+      </div>
+      <div className='div-right'></div>
+
     </div>
   );
 }
